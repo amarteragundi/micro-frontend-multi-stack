@@ -1,1 +1,1 @@
-# micro-frontend-react-project
+# Sample micro frontend project with React and Vue
