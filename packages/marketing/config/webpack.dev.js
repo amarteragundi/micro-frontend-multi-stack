@@ -1,8 +1,7 @@
 const { merge } = require("webpack-merge");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
 const commonConfig = require("./webpack.common");
 const ModuleFederation = require("webpack/lib/container/ModuleFederationPlugin");
-const packageJSON = require('../package.json');
+const packageJSON = require("../package.json");
 
 const devConfig = {
   mode: "development",
@@ -13,16 +12,13 @@ const devConfig = {
     },
   },
   plugins: [
-    new HTMLWebpackPlugin({
-      template: "./public/index.html",
-    }),
     new ModuleFederation({
       name: "marketing",
       filename: "remoteEntry.js",
       exposes: {
         "./MarketingApp": "./src/bootstrap",
       },
-      shared: packageJSON.dependencies
+      shared: packageJSON.dependencies,
     }),
   ],
 };
