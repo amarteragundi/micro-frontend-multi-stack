@@ -1,22 +1,7 @@
 import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
-import { StylesProvider } from "@material-ui/core/styles";
 
-// import Landing from "./components/Landing";
-// import Pricing from "./components/Pricing";
+import MarketingApp from "./components/MarketingApp";
 
 export default () => {
-  return (
-    <div>
-        Hi There
-      {/* <StylesProvider>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/pricing" component={Pricing} />
-            <Route path="/" component={Landing} />
-          </Switch>
-        </BrowserRouter>
-      </StylesProvider> */}
-    </div>
-  );
+  return <MarketingApp />;
 };
