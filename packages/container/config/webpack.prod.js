@@ -21,5 +21,5 @@ const prodConfig = {
     }),
   ],
 };
-
+// exporting merge
 module.exports = merge(commonConfig, prodConfig);
